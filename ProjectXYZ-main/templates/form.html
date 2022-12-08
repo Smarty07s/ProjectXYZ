@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body>
+    <form  method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="clas">No. of classes</label>
+        <input type="number" name="clas" id="clas">
+        <button id="nxt1" onclick="create()" type="button">Next</button>
+        <div id="vn"></div>
+        <input type="submit" value="submit" formaction='created'>
+    </form>
+    <script>
+        
+        function create() {
+            let vno = document.getElementById('clas').value;
+            for (let a = 0;a == vno;a++){
+                lab=document.createElement('label');
+                lab.for='class'+a;
+                lab.innerHTML = 'class'+a;
+                document.getElementById('vn').appendChild(lab);
+                a++
+            }  
+        }
+    
+        
+    </script>
+
+</body>
+</html>
